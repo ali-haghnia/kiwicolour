@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="Settings" >
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="emailchk"
+        android:summary="By checking this option your email address will be saved into the login page "
+        android:title="Save email" >
+    </CheckBoxPreference>
+    <CheckBoxPreference
+        android:key="passwordchk"
+        android:summary="By checking this option your password will be saved into the login page "
+        android:title="Save password" >
+    </CheckBoxPreference>
+
+    <EditTextPreference
+        android:defaultValue="4"
+        android:key="OrderQuantity"
+        android:summary="How many orders you want to see in home page?"
+        android:title="Order Quantity" >
+    </EditTextPreference>
+
+</PreferenceScreen>

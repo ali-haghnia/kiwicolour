@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1OrdrArchive"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rltvroworderarchive"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_selector"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+
+        <LinearLayout
+            android:id="@+id/thumbnailOrdrArchive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/image_bg"
+            android:padding="3dip" >
+
+            <ImageView
+                android:id="@+id/list_imageOrdrArchive"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:adjustViewBounds="true"
+                android:maxHeight="64dp"
+                android:maxWidth="64dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvStoreNameOrdrArchive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/thumbnailOrdrArchive"
+            android:layout_marginRight="75dp"
+            android:layout_toRightOf="@+id/thumbnailOrdrArchive"
+            android:maxLines="1"
+            android:text="PaintShop"
+            android:textColor="#040404"
+            android:textSize="12sp"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/tvItemOrdrArchive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvStoreNameOrdrArchive"
+            android:layout_marginTop="1dip"
+            android:layout_toLeftOf="@+id/img4LOrdrArchive"
+            android:layout_toRightOf="@+id/thumbnailOrdrArchive"
+            android:lines="2"
+            android:text="order details"
+            android:textColor="#343434"
+            android:textSize="10dip"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img4LOrdrArchive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/zoom_in" />
+
+        <TextView
+            android:id="@+id/tvDeliveryAddressOrdrArchive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ShippingOrdrArchive"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/ShippingOrdrArchive"
+            android:maxLength="35"
+            android:text="To be picked up"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#040404"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/tvReadyDateTimeOrdrArchive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/BeforeOrdrArchive"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/BeforeOrdrArchive"
+            android:text="Delivery date"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/tvNewComment_archive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvStoreNameOrdrArchive"
+            android:layout_alignBottom="@+id/tvStoreNameOrdrArchive"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/new_comment_bg"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <TextView
+            android:id="@+id/tvOrderIDOrdrArchive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvStoreNameOrdrArchive"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tvNewComment_archive"
+            android:text="OrderId"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvShopNameOrdrArchive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvOrderIDOrdrArchive"
+            android:layout_alignBottom="@+id/tvOrderIDOrdrArchive"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@id/tvOrderIDOrdrArchive"
+            android:text="#"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/BeforeOrdrArchive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tvDeliveryAddressOrdrArchive"
+            android:layout_alignBottom="@+id/tvDeliveryAddressOrdrArchive"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tvDeliveryAddressOrdrArchive"
+            android:text="Before: "
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#040404"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/ShippingOrdrArchive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/thumbnailOrdrArchive"
+            android:layout_toRightOf="@+id/thumbnailOrdrArchive"
+            android:textColor="#040404"
+            android:textSize="10sp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tvShopIDMyOrderHomeOrdrArchive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvReadyDateTimeOrdrArchive"
+            android:layout_alignParentRight="true"
+            android:text="ShopID"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvStateOrdrArchive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvOrderIDOrdrArchive"
+            android:layout_toRightOf="@+id/tvOrderIDOrdrArchive"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

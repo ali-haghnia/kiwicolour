@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutAllComments"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="#DCDCC8" >
+    
+<RelativeLayout
+    android:id="@+id/layoutHeader"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:layout_marginTop="10dp"
+    android:gravity="center_horizontal" >
+
+    <TextView
+        android:id="@+id/tvIdComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="id"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvDateTimeComments"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="Date &amp; time"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#4D76A8"
+        android:textSize="10sp" />
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/layoutBody"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentRight="true"
+    android:layout_below="@+id/layoutHeader" >
+
+    <TextView
+        android:id="@+id/tvPainterSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Painter&apos;s Name"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#4D76A8"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_toLeftOf="@+id/tvShopSender"
+        android:layout_toRightOf="@+id/tvPainterSender"
+        android:background="@drawable/comment_bg"
+        android:paddingBottom="8dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="5dp"
+        android:text="text... text... text... text... text... text... text... text... text... text... text... text... text... 123... 456.. 54321... 7654."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvShopSender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Shop Name..."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#4D76A8"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+
+</RelativeLayout>

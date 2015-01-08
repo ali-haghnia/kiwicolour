@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LayoutHome"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#DCDCC8" >
+
+        <LinearLayout
+            android:id="@+id/LayoutMain"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/LayoutButtons"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical"
+            android:scrollbars="vertical"
+            android:weightSum="100" >
+
+            
+            <RelativeLayout
+                android:id="@+id/LayoutMyOrders"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="60">
+
+                <TextView
+                    android:id="@+id/tvMyOrders"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/comment_bg"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="2dp"
+                    android:text="My Orders"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#811517"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <ListView
+                    android:id="@+id/listMyOrders"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/tvMyOrders"
+                    android:listSelector="@drawable/list_selector"
+                    android:scrollbarAlwaysDrawVerticalTrack="true" >
+
+                </ListView>
+
+                <ProgressBar
+                    android:id="@+id/wheel"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true" 
+                    android:visibility="invisible"/>
+
+                <ImageView
+                    android:id="@+id/imgSyncMyOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="32dp"
+                    android:maxWidth="32dp"
+                    android:src="@drawable/refresh90" />
+
+                <ImageView
+                    android:id="@+id/imgConnectionLost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvMyOrders"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="120dp"
+                    android:visibility="invisible" />
+
+                
+
+            </RelativeLayout>
+            
+            <RelativeLayout
+                android:id="@+id/LayoutMyShops"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="40" >
+
+                <TextView
+                    android:id="@+id/tvMyShops"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/comment_bg"
+                    android:gravity="center"
+                    android:paddingBottom="3dp"
+                    android:paddingTop="2dp"
+                    android:text="My Shops"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#811517"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <ListView
+                    android:id="@+id/listMyShops"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/tvMyShops"
+                    android:listSelector="@drawable/list_selector"
+                    android:scrollbarAlwaysDrawVerticalTrack="true" >
+
+                </ListView>
+
+                <ImageView
+                    android:id="@+id/imgSyncMyShop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="32dp"
+                    android:maxWidth="32dp"
+                    android:src="@drawable/refresh90" />
+
+                <ProgressBar
+                    android:id="@+id/wheel2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LayoutButtons"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2" >
+
+            <ImageButton
+                android:id="@+id/btnOrdersArchive"
+                style="@style/btnStyleBreakerBay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:drawableTop="@drawable/archive48"
+                android:maxHeight="48dp"
+                android:maxWidth="48dp"
+                android:src="@drawable/archive48" />
+            
+            <ImageButton
+                android:id="@+id/btnAllShops"
+                style="@style/btnStyleBreakerBay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:baselineAlignBottom="true"
+                android:cropToPadding="false"
+                android:maxHeight="48dp"
+                android:maxWidth="48dp"
+                android:src="@drawable/search48" />
+            
+            <ImageButton
+                android:id="@+id/btnMyprofile"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:text="My profile"
+                android:textSize="10sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+        
+</RelativeLayout>

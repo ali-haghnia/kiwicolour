@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nz.co.rivertech.kiwicolour"
+    android:versionCode="1"
+    android:versionName="1.2014" >
+
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="10" />
+ 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    
+    <!--  <uses-permission android:name="android.permission.INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/> -->
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/AppTheme"
+        android:icon="@drawable/kiwicolour128"
+        android:label="@string/app_name" >
+        <activity
+            android:name="nz.co.rivertech.kiwicolour.LoginActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="nz.co.rivertech.kiwicolour.ShopSearchActivity" android:configChanges="orientation" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="nz.co.rivertech.kiwicolour.ChoosePaintActivity" android:configChanges="orientation" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="nz.co.rivertech.kiwicolour.HomeActivity" android:configChanges="orientation" android:screenOrientation="portrait" />
+        <activity android:name="nz.co.rivertech.kiwicolour.CheckOutActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+        <activity android:name="nz.co.rivertech.kiwicolour.ShippingActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+        <activity android:name="nz.co.rivertech.kiwicolour.ShoppingCartActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+        <activity android:name="nz.co.rivertech.kiwicolour.WhichFandeckActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+   		<activity android:name="nz.co.rivertech.kiwicolour.SettingsActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+   		<activity android:name="nz.co.rivertech.kiwicolour.OrderArchiveActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+   		<activity android:name="nz.co.rivertech.kiwicolour.OrderCommentsActivity" android:configChanges="orientation" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+   		<activity android:name="nz.co.rivertech.kiwicolour.AboutActivity" android:configChanges="orientation" android:screenOrientation="portrait"/>
+   		</application>
+
+</manifest>
